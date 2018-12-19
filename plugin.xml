@@ -71,7 +71,7 @@
 
         <!--<header-file src="src/ios/CDVDevice.h" />-->
         <!--<source-file src="src/ios/CDVDevice.m" />-->
-        <framework src="GoogleMobileAdsMediationIronSource" type="podspec"/>
+        <framework src="GoogleMobileAdsMediationIronSource" type="podspec" spec="~> 6.7.12.0"/>
     </platform>
 
 
