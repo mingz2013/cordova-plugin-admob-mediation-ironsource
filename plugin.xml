@@ -1,0 +1,80 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-admob-mediation-ironsource"
+        version="1.0.0">
+    <name>Admob Mediation IronSource Plugin</name>
+    <description>Cordova Admob Mediation IronSource Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova, admob, mediation, ironsource</keywords>
+    <repo>https://github.com/mingz2013/cordova-plugin-admob-mediation-ironsource.git</repo>
+    <issue>https://github.com/mingz2013/cordova-plugin-admob-mediation-ironsource/issues</issue>
+
+
+    <preference name="APPLOVIN_SDK_KEY" value=""/>
+
+    <js-module src="www/AdMobMediationIronSource.js" name="AdMobMediationIronSource">
+        <clobbers target="AdMobMediationIronSource"/>
+    </js-module>
+    <!--<js-module src="www/AdMobInterface.js" name="AdMobInterface">-->
+        <!--<clobbers target="AdMobInterface"/>-->
+    <!--</js-module>-->
+
+    <dependency id="cordova-plugin-admob" url="https://github.com/mingz2013/cordova-plugin-admob"/>
+
+    <!-- android -->
+    <platform name="android">
+        <framework src="src/android/admob-mediation-ironsource.gradle" custom="true" type="gradleReference"/>
+
+        <!--<config-file target="res/xml/config.xml" parent="/*">-->
+            <!--<feature name="Device" >-->
+                <!--<param name="android-package" value="org.apache.cordova.device.Device"/>-->
+            <!--</feature>-->
+        <!--</config-file>-->
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity
+                    android:name="com.ironsource.sdk.controller.ControllerActivity"
+                    android:configChanges="orientation|screenSize"
+                    android:hardwareAccelerated="true" />
+            <activity
+                    android:name="com.ironsource.sdk.controller.InterstitialActivity"
+                    android:configChanges="orientation|screenSize"
+                    android:hardwareAccelerated="true"
+                    android:theme="@android:style/Theme.Translucent" />
+            <activity
+                    android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+                    android:configChanges="orientation|screenSize"
+                    android:hardwareAccelerated="true"
+                    android:theme="@android:style/Theme.Translucent" />
+
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AdMobMediationIronSource">
+                <param name="android-package" value="me.mingz.cordova.admob.mediation.AdMobMediationIronSourcePlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/AdMobMediationIronSourcePlugin.java" target-dir="src/me/mingz/cordova/admob/mediation" />
+
+
+    </platform>
+
+    <!-- ios -->
+    <!--<platform name="ios">-->
+        <!--<config-file target="config.xml" parent="/*">-->
+            <!--<feature name="Device">-->
+                <!--<param name="ios-package" value="CDVDevice"/>-->
+            <!--</feature>-->
+        <!--</config-file>-->
+
+        <!--<header-file src="src/ios/CDVDevice.h" />-->
+        <!--<source-file src="src/ios/CDVDevice.m" />-->
+    <!--</platform>-->
+
+
+
+
+
+</plugin>

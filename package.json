@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-admob-mediation-ironsource",
+  "version": "1.0.0",
+  "description": "cordova plugin admob mediation ironsource",
+  "main": "www/AdMobMediationIronSource.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingz2013/cordova-plugin-admob-mediation-ironsource.git"
+  },
+  "keywords": [
+    "cordova",
+    "admob",
+    "mediation",
+    "ironsource"
+  ],
+  "author": "mingz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mingz2013/cordova-plugin-admob-mediation-ironsource/issues"
+  },
+  "homepage": "https://github.com/mingz2013/cordova-plugin-admob-mediation-ironsource#readme"
+}
